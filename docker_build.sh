@@ -1,0 +1,5 @@
+#!/bin/bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+docker build -f "$SCRIPT_DIR/dockerfile" -t codex-main "$SCRIPT_DIR"
